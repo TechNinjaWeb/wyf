@@ -1,0 +1,6 @@
+FROM joomla
+
+ENV JOOMLA_DB_HOST=localhost JOOMLA_DB_USER=root \
+JOOMLA_DB_PASSWORD=admin JOOMLA_DB_NAME=whittle_scrap
+
+EXPOSE 8080

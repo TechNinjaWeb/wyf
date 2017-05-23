@@ -1,0 +1,32 @@
+version: '2'
+
+services:
+
+  wyf-app:
+    build:
+      context: .
+      dockerfile: ./.docker/wyf-app.development.dockerfile
+    command: npm start
+    container_name: wyf-app-start
+    image: wyf-app
+    networks:
+      - dev-network
+    ports:
+      - '3000:3000'
+
+  joomla:
+    image: joomla
+    links:
+      - joomladb:mysql
+    ports:
+      - 8080:80
+
+  joomladb:
+    image: mysql:5.6
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+
+
+networks:
+  dev-network:
+    driver: bridge
