@@ -262,8 +262,10 @@ section.thoughts:before {
     z-index: -1;
 }
 
+.feature-text { font-weight: bold; }
+
 .feature-text-caption {
-    font-style: italic;
+	font-style: italic;
     margin-top: 40px;
 }
 
@@ -282,12 +284,10 @@ section.services {
 	text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
 }
 
-.services-container h4 {
-    font-size: 26px;
-}
-
 .services .heading {
-	margin: 40px 0;
+	margin: 40px 0 20px 0;
+	font-size: 45px;
+	letter-spacing: 18px;
 }
 
 .services .service-description {
@@ -309,6 +309,9 @@ section.contact {
     margin-top: 60px;
 }
 .contact > .heading {
+	font-size: 45px;
+	font-weight: bold;
+	letter-spacing: 18px;
 	padding: 50px 0 50px 2%;
 }
 
@@ -332,12 +335,15 @@ section.contact {
 	text-shadow: 2px 2px 4px rgba(255, 255, 255, .25);
 }
 .contact-info p {
-    font-size: 26px;
+	font-size: 35px;
+	letter-spacing: 2px;
     margin-bottom: 20px;
+	word-break: break-word;
 }
 .contact-form input, .contact-form textarea, .contact-form checkbox {
     background-color: #6E272B;
     border: 1px solid #100506;
+	border-radius: initial;
     box-shadow: inset 1px 1px 4px rgba(0,0,0,0.3);
 	margin-bottom: 15px;
     color: white;
