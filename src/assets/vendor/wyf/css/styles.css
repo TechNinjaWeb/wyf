@@ -14,8 +14,10 @@ html, body {
 	width: 100%;
 	height: 100%;
 	min-width: 320px;
-	color: #0B1000;
+	color: #371F00;
 	font-family: Arial, Helvetica, sans-serif;
+	/*overflow-y: scroll;*/
+	/*overflow-x: hidden;*/
 }
 
 a, a:hover, a:visited, a:focus, a:active { text-decoration: none; }
@@ -41,11 +43,8 @@ a, a:hover, a:visited, a:focus, a:active { text-decoration: none; }
 .fluid { width: 100%; height: 100%; }
 .full-width { width: 100%; }
 
-.shadow-white {
-	text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
-}
-
-
+.shadow-white { text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); }
+.shadow-black { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
 
 
 
@@ -56,6 +55,12 @@ a, a:hover, a:visited, a:focus, a:active { text-decoration: none; }
 	/* HELPER STYLES */
 	
 	/* Global Styles */
+
+	i.icon-wyf-logo {
+		bottom: -66px;
+		/*font-size: 300px;*/
+		font-size: 20vw;
+	}
 
 	/*
 		HOME PAGE STYLES
@@ -78,10 +83,25 @@ a, a:hover, a:visited, a:focus, a:active { text-decoration: none; }
 
 @media (min-width: 768px) and (max-width: 992px) { /* EVERYTHING IN BETWEEN */
 	/* HELPER STYLES */
+
+	/* Global Styles */
+
+	i.icon-wyf-logo {
+		bottom: -70px;
+		/*font-size: 300px;*/
+		font-size: 20vw;
+	}
 }
 
 @media (min-width: 992px) { /* LARGER THAN PHONE */
 	/* HELPER STYLES */
+
+	/* Global Styles */
+	i.icon-wyf-logo {
+		bottom: -100px;
+		/*font-size: 300px;*/
+		font-size: 20vw;
+	}
 }
 
 @media (min-width: 768px) { /* EVERYTHING LARGER THAN PHONE */
@@ -94,7 +114,7 @@ a, a:hover, a:visited, a:focus, a:active { text-decoration: none; }
 	}
 	/* Global Styles */
 	ul.nav.navbar-nav {
-		margin-left: 38%;
+		margin-left: 28%;
 	}
 
 	/*
@@ -117,9 +137,8 @@ a, a:hover, a:visited, a:focus, a:active { text-decoration: none; }
 
 	/* Contact Me Section */
 	section.contact {
-		background-color: #AB3D44;
 		margin-top: -20px;
-		padding: 0 50px;
+		padding: 0 50px 50px 50px;
 	}
 }
 
@@ -154,6 +173,27 @@ nav.navbar {
     background-color: #00101B;
     border: none;
     border-radius: 0;
+	font-size: 20px;
+}
+
+.nav-link {
+	margin-right: 20px;
+    letter-spacing: 2px;
+}
+
+.nav.navbar-nav > .nav-link.active > a, .nav.navbar-nav > .nav-link > a {
+	color: #EBAB27;
+    background-color: transparent;
+}
+
+.nav.navbar-nav > .nav-link > a:hover {
+	background-color: #EBAB27;
+	color: #371F00;
+}
+
+.nav.navbar-nav > .nav-link.active > a {
+	background-color: #EBAB27;
+	color: white;
 }
 
 .logo-container {
@@ -162,8 +202,6 @@ nav.navbar {
 
 i.icon-wyf-logo {
     position: absolute;
-    bottom: -100px;
-    font-size: 300px;
     color: #EBAB27;
     text-shadow: 3px 2px 2px rgba(0,0,0,.6);
 }
@@ -204,8 +242,10 @@ section.gallery {
 section.thoughts {
 	position: relative;
 	overflow-y: hidden;
-    width: 100vw;
-    height: 60vh;
+    min-width: 100vw;
+    min-height: 60vh;
+	font-size: 40px;
+	padding: 100px 0;
 }
 
 section.thoughts:before {
@@ -222,6 +262,11 @@ section.thoughts:before {
     z-index: -1;
 }
 
+.feature-text-caption {
+    font-style: italic;
+    margin-top: 40px;
+}
+
 
 /* Services Section */
 section.services {
@@ -229,6 +274,7 @@ section.services {
     margin-top: -20px;
 	padding: 20px 0 100px 0;
 	min-height: 100vh;
+	color: #371F00;
 }
 
 .services [class*='col-'] > i, .services .flex-column > i {
@@ -253,15 +299,33 @@ section.services {
 
 
 /* Contact Me Section */
+section.contact {
+	background-color: #AB3D44;
+	margin-top: -20px;
+	min-height: 100vh;
+	color: #371F00;
+}
 .contact-info:nth-child(1) {
     margin-top: 60px;
 }
 .contact > .heading {
-	padding: 50px 0;
+	padding: 50px 0 50px 2%;
 }
 
 .social-media-icons {
-    font-size: 5vw;
+	font-size: 60px;
+}
+
+.social-media-icons a {
+	color: #371F00;
+}
+.social-media-icons a:hover {
+    color: #6E272B;
+}
+
+.social-media-icons a:focus {
+    outline: none;
+    color: inherit;
 }
 
 .contact-info {

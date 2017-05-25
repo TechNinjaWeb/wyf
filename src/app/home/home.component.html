@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#wyf-nav" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -17,12 +17,12 @@
         </div>
         <!--Fluid Container End-->
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+        <div class="collapse navbar-collapse" id="wyf-nav">
+            <ul class="nav navbar-nav uppercase">
+                <li class="nav-link active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                <li class="nav-link"><a href="#">About</a></li>
+                <li class="nav-link"><a href="#">Services</a></li>
+                <li class="nav-link"><a href="#">Contact</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -64,10 +64,14 @@
 		</div>
 	</div>
 </section>
-<section class="thoughts">
-    <p class="feature-text text-center">"Photography is an immediate reaction
-        <br />drawing is a meditation."</p>
-    <p class="feature-text-caption text-center">- henri cartier-bresson -</p>
+<section class="thoughts d-flex justify-content-center align-items-center flex-wrap flex-column">
+    <div class="thoughts-container container">
+		<p class="feature-text text-center shadow-white">
+			"Photography is an immediate reaction
+			<br />drawing is a meditation."
+		</p>
+		<p class="feature-text-caption text-center">- henri cartier-bresson -</p>
+	</div>
 </section>
 <section class="services text-center shadow-white">
     <h2 class="heading uppercase">Services</h2>
@@ -94,32 +98,32 @@
 		</div>
 	</div>
 </section>
-<section class="contact full-vh">
+<section class="contact">
     <h2 class="heading uppercase shadow-white">Contact</h2>
-    <div class="container">
-		<div class="contact-info col-sm-6">
-			<p>Dami Sanusi</p>
-			<p>Whitby, ON</p>
-			<p>(647) 774-1174</p>
-			<p>Dami.Sanusi@gmail.com</p>
-			<div class="social-media-icons">
-				<i class="icon-facebook"></i>
-				<i class="icon-instagram"></i>
-				<i class="icon-vsco"></i>
-			</div>
-		</div>
-		<div class="form-container col-sm-6">
-			<form action="" class="contact-form">
-				<div class="form-group">
-					<input type="text" class="form-control full-name" placeholder="Full Name">
-					<input type="email" class="form-control email" placeholder="Email">
-					<input type="text" class="form-control inquiry" placeholder="Inquiry">
-					<textarea name="" id="" cols="30" rows="10" class="form-control message" placeholder="Write Your Message!"></textarea>
-					<button class="wyf-button full-width">Send</button>
-				</div>
-			</form>
+
+	<div class="contact-info col-sm-4 col-sm-offset-1">
+		<p>Dami Sanusi</p>
+		<p>Whitby, ON</p>
+		<p>(647) 774-1174</p>
+		<p>Dami.Sanusi@gmail.com</p>
+		<div class="social-media-icons">
+			<a href="https://www.facebook.com/ItsMeDami" class="social-link" target="blank"><i class="icon-facebook"></i></a>
+			<a href="https://www.instagram.com/waleyafoto/" class="social-link" target="blank"><i class="icon-instagram"></i></a>
+			<a href="http://vsco.co/itsmedami/images/1" class="social-link" target="blank"><i class="icon-vsco"></i></a>
 		</div>
 	</div>
+	<div class="form-container col-sm-4 col-sm-offset-1">
+		<form action="" class="contact-form">
+			<div class="form-group">
+				<input type="text" class="form-control full-name" placeholder="Full Name">
+				<input type="email" class="form-control email" placeholder="Email">
+				<input type="text" class="form-control inquiry" placeholder="Inquiry">
+				<textarea name="" id="" cols="30" rows="10" class="form-control message" placeholder="Write Your Message!"></textarea>
+				<button class="wyf-button full-width">Send</button>
+			</div>
+		</form>
+	</div>
+
 </section>
 <section class="dev-brand" dev-brand>
 </section>
