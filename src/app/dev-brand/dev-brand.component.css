@@ -1,0 +1,215 @@
+/* --------------------------------------
+ * DEV BRAND
+ * -------------------------------------- */
+.dev-tag-wrapper {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.dev-tag {
+  position: relative;
+  background-color: #333131;
+  z-index: 0;
+  height: 24px;
+}
+
+.dev-tag p {
+  margin: 0 auto;
+  padding: 4px;
+  width: 300px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.dev-link {
+  position: relative;
+  bottom: 12px;
+  left: 48%
+}
+
+.dev-link:after {
+    content: "";
+    position: absolute;
+    background-color: #333131;
+    width: 50px;
+    height: 50px;
+    top: -28px;
+    border-radius: 50px;
+    z-index: -1;
+}
+
+.dev-chevron {
+    position: absolute;
+    margin: 0 auto;
+    top: -24px;
+    left: 17px;
+    z-index: 2;
+    color: #FBA83C;
+    text-align: center;
+}
+
+span.dev-by {
+    color: #CDCDCD;
+}
+
+span.dt-primary {
+    color: #3A89C3;
+}
+
+span.dt-secondary {
+    color: #FBA83C;
+}
+
+.dev-link-page-wrapper {
+  display: block;
+  width: 100%;
+  height: 20px;
+  height: 100%;
+  position: absolute;
+  color: white;
+  top: 28px;
+  overflow: scroll;
+}
+
+.dev-link-page-wrapper:before {
+    content: "";
+    overflow: hidden;
+    background-color: black;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150%;
+    width: 1000%;
+    opacity: 0.5;
+}
+
+.dev-link-page-wrapper:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 150%;
+  position: absolute;
+  color: white;
+  top: 0;
+  overflow: hidden;
+  background-image: url('/assets/images/dev_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.dev-link-page-wrapper textarea,
+.dev-link-page-wrapper button {
+  width: 100%;
+}
+
+.dev-link-page-wrapper button {
+    width: 40%;
+}
+
+.dev-link-page-wrapper input,
+.dev-link-page-wrapper textarea {
+  margin-bottom: 10px;
+}
+
+.dev-content {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    margin-top: 40px;
+    z-index: 1;
+    font-family: 'Pt Sans';
+}
+
+
+.dev-content .brand-logo {
+  font-family: 'Rationale';
+  margin-bottom: 40px;
+}
+
+.dev-content .logo {
+  width: 200px;
+  font-size: 50px;
+}
+
+.dev-content .hr_divide {
+  /*width: 200px;
+  float: left;*/
+  margin-top: 5px;
+}
+
+.dev-slogan {
+  font-family: 'Open Sans Condensed';
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.dev-info {
+    font-family: 'PT Sans';
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.dev-contact-bar {
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.dev-contact-bar li {
+    font-size: 25px;
+    margin-right: 25px;
+}
+
+.dev-contact-bar li:last-child {
+    margin-right: 0;
+}
+
+.dev-contact-bar a {
+  text-decoration: none;
+  color: white;
+}
+
+.dev-contact-bar a:hover {
+  cursor: pointer;
+  color: #ffcc43;
+}
+
+.dev-primary {
+    color: #3A89C3;
+}
+
+.dev-secondary {
+    color: #F8982F;
+}
+
+.dev-serv {
+    display: block;
+    margin-top: -10px;
+    font-size: 20px;
+    margin-left: 56%;
+}
+
+.dev-contact {
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 34px;
+}
+
+.dev-contact-info {
+  margin-bottom: 120px;
+}
+
+.dev-content .contact-form textarea {
+    border-radius: 4px;
+    color: #555555;
+    padding-left: 12px;
+}

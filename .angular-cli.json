@@ -17,11 +17,19 @@
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
-      "prefix": "app",
+      "prefix": "wyf",
       "styles": [
-        "styles.css"
+        "assets/vendor/wyf/css/styles.css",
+        "assets/vendor/fontello/css/wyf-app-icons.css",
+        "../node_modules/font-awesome/css/font-awesome.min.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "assets/vendor/wyf/css/bootstrap-flex-fix.css",
+        "../node_modules/animate.css/animate.min.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
