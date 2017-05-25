@@ -43,8 +43,11 @@ a, a:hover, a:visited, a:focus, a:active { text-decoration: none; }
 .fluid { width: 100%; height: 100%; }
 .full-width { width: 100%; }
 
-.shadow-white { text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6); }
-.shadow-black { text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); }
+.text-shadow-white { text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6); }
+.text-shadow-black { text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); }
+.box-shadow-white { box-shadow: 1px 1px 4px rgba(255,255,255,0.5); }
+.box-shadow-black { box-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
+
 
 
 
@@ -67,13 +70,9 @@ a, a:hover, a:visited, a:focus, a:active { text-decoration: none; }
 	*/
 
 	/* About Section */
-	.about-image {
-		width: 100px;
-		border: 4px solid black;
-		float: right;
-		margin-right: 10%;
-		margin-top: -50px;
-	}
+	/*.about-image {
+		
+	}*/
 
 	/* Gallery Section */
 	.gallery .heading {
@@ -81,6 +80,7 @@ a, a:hover, a:visited, a:focus, a:active { text-decoration: none; }
 	}
 
 	/* Contact Section */
+	.contact-info { margin-bottom: 150px; }
 	.contact-info p {
 		font-size: 2em;
 	}
@@ -108,6 +108,12 @@ a, a:hover, a:visited, a:focus, a:active { text-decoration: none; }
 		font-size: 20vw;
 	}
 
+	/* About Section */
+	img.about-image { 
+		max-width: 180px;
+		margin-top: 50px;
+	}
+
 	/* Contact Section */
 	.contact-info p {
 		font-size: 2.5em;
@@ -132,13 +138,6 @@ a, a:hover, a:visited, a:focus, a:active { text-decoration: none; }
 	*/
 
 	/* About Section */
-	.about-image {
-		width: 180px;
-		border: 4px solid black;
-		float: right;
-		margin-right: 10%;
-		margin-top: -50px;
-	}
 
 	/* Gallery Section */
 	.gallery .heading {
@@ -147,7 +146,6 @@ a, a:hover, a:visited, a:focus, a:active { text-decoration: none; }
 
 	/* Contact Me Section */
 	section.contact {
-		margin-top: -20px;
 		padding: 0 50px 50px 50px;
 	}
 }
@@ -217,13 +215,38 @@ i.icon-wyf-logo {
 }
 
 
-/* About Me Section */
+/* About Section */
 section.about {
+	position: relative;
 	margin-top: -20px;
-    width: 100vw;
-    height: 60vh;
+	padding: 6%;
+    min-width: 100vw;
+    min-height: 60vh;
+	box-shadow: -1px -1px 4px rgba(0,0,0,0.5);
 }
 
+.about-paragraph {
+    padding-bottom: 100px;
+}
+
+.about-image {
+	border: 4px solid black;
+	margin-right: 10%;
+	margin-top: 20px;
+}
+
+img.about-image { 
+	padding: 0; 
+}
+
+.about .title { 
+	font-size: 2em; 
+	margin-bottom: 40px;
+}
+.about .description { 
+	font-size: 1.4em; 
+	line-height: 2em;
+}
 
 /* Gallery Section */
 section.gallery {
@@ -238,7 +261,7 @@ section.gallery:after {
 	position: absolute;
 	top: 0; left: 0;
 	width: 100%; height: 100%;
-	background: rgba(0, 70, 114, 1) url(https://www.toptal.com/designers/subtlepatterns/patterns/circles-and-roundabouts.png) fixed;
+	background: rgba(0, 70, 114, 1) url(/assets/images/patterns/circles-and-roundabouts.png) fixed;
 	z-index: -1;
 }
 
@@ -265,7 +288,7 @@ section.thoughts {
 	overflow-y: hidden;
     min-width: 100vw;
     min-height: 70vh;
-	font-size: 40px;
+	font-size: 34px;
 	padding: 100px 0;
 }
 
@@ -283,7 +306,10 @@ section.thoughts:before {
     z-index: -1;
 }
 
-.feature-text { font-weight: bold; }
+.feature-text { 
+	font-weight: bold;
+    line-height: 1em;
+}
 
 .feature-text-caption {
 	font-style: italic;
@@ -295,7 +321,6 @@ section.thoughts:before {
 section.services {
 	position: relative;
     background-color: rgba(188, 146, 107, 0.6);
-    margin-top: -20px;
 	padding: 20px 0 100px 0;
 	min-height: 100vh;
 	color: #371F00;
@@ -306,7 +331,7 @@ section.services:after {
 	position: absolute;
 	top: 0; left: 0;
 	width: 100%; height: 100%;
-	background: rgba(0, 70, 114, 1) url(https://www.toptal.com/designers/subtlepatterns/patterns/polaroid.png);
+	background: rgba(0, 70, 114, 1) url(/assets/images/patterns/polaroid.png);
 	z-index: -1;
 }
 
@@ -329,11 +354,10 @@ section.services:after {
 }
 
 
-/* Contact Me Section */
+/* Contact Section */
 section.contact {
 	position: relative;
 	background-color: rgba(171, 61, 68, 0.7);
-	margin-top: -20px;
 	min-height: 100vh;
 	color: #371F00;
 }
@@ -343,14 +367,14 @@ section.contact:after {
 	position: absolute;
 	top: 0; left: 0;
 	width: 100%; height: 100%;
-	background: rgba(0, 70, 114, 1) url(https://www.toptal.com/designers/subtlepatterns/patterns/sports.png) fixed;
+	background: rgba(0, 70, 114, 1) url(/assets/images/patterns/sports.png) fixed;
 	z-index: -1;
 }
 
 .contact-info:nth-child(1) {
     margin-top: 60px;
 }
-.contact > .heading {
+.contact .heading {
 	font-size: 45px;
 	font-weight: bold;
 	letter-spacing: 18px;
