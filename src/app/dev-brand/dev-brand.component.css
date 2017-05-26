@@ -1,3 +1,23 @@
+@media (min-width: 992px) { /* LARGER THAN PHONE */
+    .dev-link-page-wrapper:before {
+        height: 100%;
+    }
+
+    .dev-link-page-wrapper:after {
+    height: 100%;
+    }
+}
+
+@media (max-width: 992px) { /* SMALLER THAN DESKTOP */
+    .dev-link-page-wrapper:before {
+        height: 150%;
+    }
+
+    .dev-link-page-wrapper:after {
+    height: 150%;
+    }	
+}
+
 /* --------------------------------------
  * DEV BRAND
  * -------------------------------------- */
@@ -82,7 +102,6 @@ span.dt-secondary {
     position: absolute;
     top: 0;
     left: 0;
-    height: 150%;
     width: 1000%;
     opacity: 0.5;
 }
@@ -91,7 +110,6 @@ span.dt-secondary {
   content: "";
   display: block;
   width: 100%;
-  height: 150%;
   position: absolute;
   color: white;
   top: 0;
@@ -129,7 +147,6 @@ span.dt-secondary {
     z-index: 1;
     font-family: 'Pt Sans';
 }
-
 
 .dev-content .brand-logo {
   font-family: 'Rationale';
