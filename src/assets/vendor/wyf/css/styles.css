@@ -27,11 +27,20 @@
 	/* About Section */
 
 	/* Gallery Section */
+	a.gallery-link, a.gallery-link:hover, a.gallery-link:visited, a.gallery-link:focus {
+		text-decoration: none!important;
+	}
 	.gallery .heading {
 		margin: 0;
 	}
 
+	/* Services Section */
+	
+
 	/* Contact Section */
+	.contact .container {
+		padding-bottom: 40px;
+	}
 	.contact-info { margin-bottom: 150px; }
 	.contact-info p {
 		font-size: 2em;
@@ -50,9 +59,18 @@
 	}
 
 	/* About Section */
+	.about .description {
+		text-align: center;
+	}
 	img.about-image { 
 		max-width: 300px;
 		border-radius: 300px;
+	}
+	
+
+	/* Contact Section */
+	.contact-info p:nth-child(4) {
+		font-size: 14px;
 	}
 }
 
@@ -66,6 +84,7 @@
 	/* About Section */
 	img.about-image { 
 		border-radius: 500px;
+		max-width: 100px;
 	}
 }
 
@@ -91,6 +110,10 @@
 	.contact-info p {
 		font-size: 2.5em;
 	}
+
+	.contact-info p:nth-child(4) {
+		font-size: 26px;
+	}
 }
 
 @media (min-width: 768px) { /* EVERYTHING LARGER THAN TABLET */
@@ -105,7 +128,7 @@
 	}
 	/* Global Styles */
 	ul.nav.navbar-nav {
-		margin-left: 28%;
+		margin-left: 24%;
 	}
 
 	/*
@@ -185,6 +208,7 @@ a, a:hover, a:visited, a:focus, a:active { text-decoration: none; }
 /* 
 	Navigation Section 
 */
+.navigation { z-index: 2; }
 nav.navbar {
     background-color: #00101B;
     border: none;
@@ -196,9 +220,11 @@ nav.navbar {
 	border: none;
 	text-align: center;
 }
+
 .nav-link {
 	margin-right: 20px;
     letter-spacing: 2px;
+	cursor: pointer;
 }
 
 .nav.navbar-nav > .nav-link.active > a, .nav.navbar-nav > .nav-link > a {
@@ -206,8 +232,7 @@ nav.navbar {
     background-color: transparent;
 }
 
-.nav.navbar-nav > .nav-link > a:hover {
-	/*background-color: #EBAB27;*/
+.nav.navbar-nav > .nav-link > a:hover, .nav.navbar-nav > .nav-link > a:focus {
 	color: white;
 }
 
@@ -389,6 +414,10 @@ section.services:after {
 	letter-spacing: 18px;
 }
 
+.services .title {
+    font-size: 28px;
+}
+
 .services .service-description {
 	word-break: break-word;
     max-width: 250px;
@@ -416,10 +445,6 @@ section.contact:after {
 
 .contact-info:nth-child(1) {
     margin-top: 60px;
-}
-
-.contact-info p:nth-child(4) {
-    font-size: 26px;
 }
 
 .contact .heading {

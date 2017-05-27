@@ -1,33 +1,6 @@
-<section class="slider">
-    <img src="assets/images/home-page/slideshow/bg-1.jpg" alt="" class="slider-image">
-</section>
-<section class="navigation box-shadow-black">
-    <nav class="navbar navbar-default">
-        <div class="logo-container"><i class="icon-wyf-logo"></i></div>
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#wyf-nav" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-        </div>
-        <!--Fluid Container End-->
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="wyf-nav">
-            <ul class="nav navbar-nav uppercase">
-                <li class="nav-link active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                <li class="nav-link"><a href="#">About</a></li>
-                <li class="nav-link"><a href="#">Services</a></li>
-                <li class="nav-link"><a href="#">Contact</a></li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </nav>
-</section>
+<wyf-slider></wyf-slider>
+<wyf-navigation></wyf-navigation>
+<a id="about-anchor"></a>
 <section class="about container">
 	<div class="row">
 		<div class="about-paragraph col-md-5 col-md-offset-2">
@@ -41,12 +14,13 @@
 		<img src="assets/images/home-page/about/dami-sanusi.jpg" alt="" class="about-image col-md-3 img-responsive">
 	</div>
 </section>
+<a id="gallery-anchor"></a>
 <section class="gallery d-flex justify-content-center align-items-center">
 	<div class="d-md-flex flex-row-reverse flex-wrap">
 		<div class="flex-row">
 			<h2 class="heading uppercase vertical-text">Gallery</h2>
 		</div>
-		<div class="d-sm-flex flex-row">
+		<a href [routerLink]="['/gallery']" class="gallery-link"><div class="d-sm-flex flex-row">
 			<div class="gallery-container flex-column">
 				<div class="gallery-feature">
 					<img src="assets/images/home-page/gallery/weddings.jpg" alt="" class="gallery-feature-image">
@@ -63,7 +37,7 @@
 					<img src="assets/images/home-page/gallery/landscapes.jpg" alt="" class="gallery-feature-image">
 				</div>
 			</div>
-		</div>
+		</div></a>
 	</div>
 </section>
 <section class="thoughts d-flex justify-content-center align-items-center flex-wrap flex-column box-shadow-black">
@@ -75,6 +49,7 @@
 		<p class="feature-text-caption text-center">- henri cartier-bresson -</p>
 	</div>
 </section>
+<a id="services-anchor"></a>
 <section class="services text-center text-shadow-white box-shadow-black">
     <h2 class="heading uppercase">Services</h2>
     <div class="services-container d-md-flex justify-content-center flex-wrap">
@@ -100,31 +75,6 @@
 		</div>
 	</div>
 </section>
-<section class="contact">
-    <div class="container">
-		<h2 class="heading uppercase text-shadow-white">Contact</h2>
-		<div class="contact-info col-sm-4 col-sm-offset-1">
-			<p>Dami Sanusi</p>
-			<p>Whitby, ON</p>
-			<p>(647) 774-1174</p>
-			<p>dami.sanusi@gmail.com</p>
-			<div class="social-media-icons">
-				<a href="https://www.facebook.com/ItsMeDami" class="social-link col-xs-4" target="blank"><i class="icon-facebook"></i></a>
-				<a href="https://www.instagram.com/waleyafoto/" class="social-link col-xs-4" target="blank"><i class="icon-instagram"></i></a>
-				<a href="http://vsco.co/itsmedami/images/1" class="social-link col-xs-4" target="blank"><i class="icon-vsco"></i></a>
-			</div>
-		</div>
-		<div class="form-container col-sm-4 col-sm-offset-1">
-			<form action="" class="contact-form">
-				<div class="form-group">
-					<input type="text" class="form-control full-name" placeholder="Full Name">
-					<input type="email" class="form-control email" placeholder="Email">
-					<input type="text" class="form-control inquiry" placeholder="Inquiry">
-					<textarea name="" id="" cols="30" rows="10" class="form-control message" placeholder="Write Your Message!"></textarea>
-					<button class="wyf-button full-width">Send</button>
-				</div>
-			</form>
-		</div>
-	</div>
-</section>
+<a id="contact-anchor"></a>
+<wyf-contact></wyf-contact>
 <dev-brand></dev-brand>
