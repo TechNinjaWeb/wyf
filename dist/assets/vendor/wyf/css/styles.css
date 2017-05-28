@@ -1,0 +1,520 @@
+/*****************************************************************************
+*	Filename: 		style.css
+*	Author: 		Tech Ninja
+*	Date: 			May 24, 2017
+*	Description: 	Global stylesheet for the wyf-app
+******************************************************************************/
+
+/* --------------------------------------
+ * RESPONSIVE SECTION
+ * -------------------------------------- */
+@media (max-width: 768px) {	/* TARGET PHONE ONLY */
+	/* 
+		HELPER STYLES 
+	*/
+	
+	/* Global Styles */
+	i.icon-wyf-logo {
+		bottom: -66px;
+		/*font-size: 300px;*/
+		font-size: 20vw;
+	}
+
+	/*
+		HOME PAGE STYLES
+	*/
+
+	/* About Section */
+
+	/* Gallery Section */
+	a.gallery-link, a.gallery-link:hover, a.gallery-link:visited, a.gallery-link:focus {
+		text-decoration: none!important;
+	}
+	.gallery .heading {
+		margin: 0;
+	}
+
+	/* Services Section */
+	
+
+	/* Contact Section */
+	.contact .container {
+		padding-bottom: 40px;
+	}
+	.contact-info { margin-bottom: 150px; }
+	.contact-info p {
+		font-size: 2em;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 992px) { /* EVERYTHING IN BETWEEN */
+	/* 
+		HELPER STYLES 
+	*/
+
+	/* Global Styles */
+	i.icon-wyf-logo {
+		bottom: -70px;
+		font-size: 20vw;
+	}
+
+	/* About Section */
+	.about .description {
+		text-align: center;
+	}
+	img.about-image { 
+		max-width: 300px;
+		border-radius: 300px;
+	}
+	
+
+	/* Contact Section */
+	.contact-info p:nth-child(4) {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 992px) { /* SMALLER THAN DESKTOP */
+	/* 
+		HELPER STYLES 
+	*/
+
+	/* Global Styles */
+
+	/* About Section */
+	img.about-image { 
+		border-radius: 500px;
+		max-width: 100px;
+	}
+}
+
+@media (min-width: 992px) { /* LARGER THAN DESKTOP */
+	/* 
+		HELPER STYLES 
+	*/
+
+	/* Global Styles */
+	i.icon-wyf-logo {
+		bottom: -100px;
+		font-size: 20vw;
+	}
+
+	/* About Section */
+	img.about-image { 
+		max-width: 180px;
+		margin-top: 50px;
+		border-radius: 100px;
+	}
+
+	/* Contact Section */
+	.contact-info p {
+		font-size: 2.5em;
+	}
+
+	.contact-info p:nth-child(4) {
+		font-size: 26px;
+	}
+}
+
+@media (min-width: 768px) { /* EVERYTHING LARGER THAN TABLET */
+	/* 
+		HELPER STYLES 
+	*/
+	.vertical-text {
+		width: 1em;
+		font-size: 50px;
+		word-wrap: break-word;
+		letter-spacing: 20px;
+	}
+	/* Global Styles */
+	ul.nav.navbar-nav {
+		margin-left: 24%;
+	}
+
+	/*
+		HOME PAGE STYLES
+	*/
+
+	/* About Section */
+
+	/* Gallery Section */
+	.gallery .heading {
+		margin: -8px 0 0 20px;
+	}
+
+	/* Contact Me Section */
+	section.contact {
+		padding: 0 50px 50px 50px;
+	}
+}
+
+/* --------------------------------------
+ * GLOBAL STYLES
+ * -------------------------------------- */
+html, body { 
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-width: 320px;
+	color: #371F00;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+a, a:hover, a:visited, a:focus, a:active { text-decoration: none; }
+
+
+/* --------------------------------------
+ * GLOBAL HELPERS
+ * -------------------------------------- */
+.lowercase { text-transform: lowercase; }
+.uppercase { text-transform: uppercase; }
+.italics { font-style: italic; }
+.thin-font { font-weight: lighter; }
+.normal-font { font-weight: normal; }
+.bold-font { font-weight: bold; }
+.thick-font { font-weight: bolder; }
+
+.full-vw { width: 100vw; }
+.full-vh { height: 100vh; }
+.full-view { width: 100vw; height: 100vh; }
+.fluid { width: 100%; height: 100%; }
+.full-width { width: 100%; }
+
+.text-shadow-white { text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6); }
+.text-shadow-black { text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); }
+.box-shadow-white { box-shadow: 1px 1px 4px rgba(255,255,255,0.5); }
+.box-shadow-black { box-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
+
+/* --------------------------------------
+ * HOME PAGE STYLES
+ * -------------------------------------- */
+
+/* Slideshow Section */
+.slider {
+	position: relative;
+	width: 100vw;
+	height: 94vh;
+    overflow-y: hidden;
+}
+
+.slider-image {
+    position: absolute;
+	top: 0;
+	right: 0;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+/* 
+	Navigation Section 
+*/
+.navigation { z-index: 2; }
+nav.navbar {
+    background-color: #00101B;
+    border: none;
+    border-radius: 0;
+	font-size: 20px;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border: none;
+	text-align: center;
+}
+
+.nav-link {
+	margin-right: 20px;
+    letter-spacing: 2px;
+	cursor: pointer;
+}
+
+.nav.navbar-nav > .nav-link.active > a, .nav.navbar-nav > .nav-link > a {
+	color: #EBAB27;
+    background-color: transparent;
+}
+
+.nav.navbar-nav > .nav-link > a:hover, .nav.navbar-nav > .nav-link > a:focus {
+	color: white;
+}
+
+.nav.navbar-nav > .nav-link.active > a, .nav.navbar-nav > .nav-link.active > a:hover {
+	background-color: #EBAB27;
+	color: white;
+}
+
+.logo-container {
+    position: relative;
+}
+
+i.icon-wyf-logo {
+    position: absolute;
+    color: #EBAB27;
+    text-shadow: 3px 2px 2px rgba(0,0,0,.6);
+}
+
+
+/* About Section */
+section.about {
+	position: relative;
+	margin-top: -20px;
+	padding: 6%;
+    min-width: 100vw;
+    min-height: 60vh;
+	box-shadow: -1px -1px 4px rgba(0,0,0,0.5);
+}
+
+.about-image {
+	border: 4px solid black;
+	margin-right: 10%;
+	margin-top: 20px;
+}
+
+img.about-image { 
+	margin-left: auto;
+    margin-right: auto;
+	padding: 0; 
+}
+
+.about .title { 
+	font-size: 2em; 
+	margin-bottom: 40px;
+}
+.about .description { 
+	font-size: 1.4em; 
+	line-height: 2em;
+}
+
+/* Gallery Section */
+section.gallery {
+	position: relative;
+    background-color: rgba(0, 70, 114, .8);
+	padding: 120px 0;
+	min-height: 100vh;
+	box-shadow: 0px -2px 1px rgba(0,0,0,0.5);
+}
+
+section.gallery:after {
+	content: '';
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+	background: rgba(0, 70, 114, 1) url(/assets/images/patterns/circles-and-roundabouts.png) fixed;
+	z-index: -1;
+}
+.gallery-container .gallery-feature img.gallery-feature-image {
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.gallery-container .gallery-feature:hover img.gallery-feature-image {
+	transform: scale(1.6) rotate(-20deg);;
+	vertical-align: top;
+	
+}
+
+.gallery-container .gallery-feature {
+	position: relative;
+	overflow: hidden;
+}
+
+.gallery-container .gallery-feature:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: none no-repeat center center;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	z-index: 1;
+}
+
+.gallery-container .gallery-feature:hover:before {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.gallery-feature {
+    border: 5px solid white;
+}
+
+.gallery-feature img {
+    height: 224px;
+	max-width: 300px;
+}
+
+.gallery .heading {
+    font-size: 60px;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+
+/* Thoughts Section */
+section.thoughts {
+	position: relative;
+	overflow-y: hidden;
+    min-width: 100vw;
+    min-height: 70vh;
+	font-size: 34px;
+	padding: 100px 0;
+}
+
+section.thoughts:before {
+	content: ' ';
+	opacity: .5;
+    background: url(/assets/images/home-page/thoughts/trees.jpg) no-repeat fixed;
+    background-size: cover;
+	background-position: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.feature-text { 
+	font-weight: bold;
+    line-height: 1em;
+}
+
+.feature-text-caption {
+	font-style: italic;
+    margin-top: 40px;
+}
+
+
+/* Services Section */
+section.services {
+	position: relative;
+    background-color: rgba(188, 146, 107, 0.6);
+	padding: 20px 0 100px 0;
+	min-height: 100vh;
+	color: #371F00;
+}
+
+section.services:after {
+	content: '';
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+	background: rgba(0, 70, 114, 1) url(/assets/images/patterns/polaroid.png);
+	z-index: -1;
+}
+
+.services [class*='col-'] > i, .services .flex-column > i {
+    font-size: 16vw;
+	text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.services .heading {
+	margin: 40px 0 20px 0;
+	font-size: 45px;
+	letter-spacing: 18px;
+}
+
+.services .title {
+    font-size: 28px;
+}
+
+.services .service-description {
+	word-break: break-word;
+    max-width: 250px;
+    margin: 0 auto;
+	padding: 0 5px;
+}
+
+
+/* Contact Section */
+section.contact {
+	position: relative;
+	background-color: rgba(171, 61, 68, 0.7);
+	min-height: 100vh;
+	color: #371F00;
+}
+
+section.contact:after {
+	content: '';
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+	background: rgba(0, 70, 114, 1) url(/assets/images/patterns/sports.png) fixed;
+	z-index: -1;
+}
+
+.contact-info:nth-child(1) {
+    margin-top: 60px;
+}
+
+.contact .heading {
+	font-size: 45px;
+	font-weight: bold;
+	letter-spacing: 18px;
+	padding: 50px 0 50px 2%;
+}
+
+.social-media-icons {
+	font-size: 60px;
+}
+
+.social-media-icons a {
+	color: #371F00;
+}
+.social-media-icons a:hover {
+    color: #6E272B;
+}
+
+.social-media-icons a:focus {
+    outline: none;
+    color: inherit;
+}
+
+.contact-info {
+	text-shadow: 2px 2px 4px rgba(255, 255, 255, .25);
+}
+.contact-info p {
+	letter-spacing: 2px;
+    margin-bottom: 20px;
+	word-break: break-word;
+}
+.contact-form input, .contact-form textarea, .contact-form checkbox {
+    background-color: #6E272B;
+    border: 1px solid #100506;
+	border-radius: initial;
+    box-shadow: inset 1px 1px 4px rgba(0,0,0,0.3);
+	margin-bottom: 15px;
+    color: white;
+}
+
+.contact-form .wyf-button {
+    background-color: transparent;
+    border: 2px solid #431C1F;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px rgba(255, 255, 255, .45);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.contact-form .wyf-button:hover {
+    background-color: #6e272b;
+    color: #fff4f4;
+    text-shadow: 2px 2px 2px black;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.4);
+}
+
+
+/* --------------------------------------
+ * ANIMATIONS
+ * -------------------------------------- */
+.rotate{
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.rotate.down{
+    -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+}

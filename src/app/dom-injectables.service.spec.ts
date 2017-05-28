@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { DomInjectablesService } from './dom-injectables.service';
+import { DomInjectableService } from './dom-injectables.service';
 
-describe('DomInjectablesService', () => {
+describe('DomInjectableService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [DomInjectablesService]
+      providers: [DomInjectableService]
     });
   });
 
-  it('should ...', inject([DomInjectablesService], (service: DomInjectablesService) => {
+  it('should ...', inject([DomInjectableService], (service: DomInjectableService) => {
     expect(service).toBeTruthy();
   }));
 });

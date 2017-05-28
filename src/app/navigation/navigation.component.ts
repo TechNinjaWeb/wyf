@@ -2,7 +2,7 @@ import { Component, Inject, OnInit, ElementRef, ViewChild, HostListener } from '
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { PageScrollConfig, PageScrollService, PageScrollInstance } from 'ng2-page-scroll';
 import { DomInjectableService } from '../dom-injectables.service';
-import $ from 'jquery';
+import $ from 'jquery/dist/jquery';
 
 
 $.fn.extend({

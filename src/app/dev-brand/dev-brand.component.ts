@@ -7,8 +7,8 @@
  * Credits:
  **********************************************************************/
 import { Component, OnInit, Inject, HostListener } from '@angular/core';
-import { DOCUMENT } from '@angular/platform-browser';
-import $ from 'jquery';
+import { DomInjectableService } from '../dom-injectables.service';
+import $ from 'jquery/dist/jquery';
 
 /**********************************************************************
  * Jquery Prototype: 
@@ -53,16 +53,16 @@ export class DevBrandComponent implements OnInit {
     private dev_tag: any;
 
     // Constructor
-    constructor(@Inject(DOCUMENT) private document: Document) {}
+    constructor( private dom: DomInjectableService) {}
 
     // Window Scroll Listener
     @HostListener("window:scroll", [])
     onWindowScroll() {
-        this.screenOffset = this.document.body.scrollHeight;
-        this.yPos = window.scrollY;
-        this.winHeight = window.innerHeight;
-        this.overlay = this.document.querySelector('.menu-overlay');
-        this.dev_tag = this.document.querySelector('.dev-tag-wrapper');
+        this.screenOffset = this.dom.document.body.scrollHeight;
+        this.yPos = this.dom.window.scrollY;
+        this.winHeight = this.dom.window.innerHeight;
+        this.overlay = this.dom.document.querySelector('.menu-overlay');
+        this.dev_tag = this.dom.document.querySelector('.dev-tag-wrapper');
 
         // Branding
         this.DevBrand(this.yPos, this.dev_tag, this.screenOffset, this.winHeight);
@@ -71,11 +71,11 @@ export class DevBrandComponent implements OnInit {
     // Executes when the controller is initialized
     ngOnInit() {
         // Set the needed parameters
-        this.screenOffset = this.document.body.scrollHeight;
-        this.yPos = window.scrollY;
-        this.winHeight = window.innerHeight;
-        this.overlay = this.document.querySelector('.menu-overlay');
-        this.dev_tag = this.document.querySelector('.dev-tag-wrapper');
+        this.screenOffset = this.dom.document.body.scrollHeight;
+        this.yPos = this.dom.window.scrollY;
+        this.winHeight = this.dom.window.innerHeight;
+        this.overlay = this.dom.document.querySelector('.menu-overlay');
+        this.dev_tag = this.dom.document.querySelector('.dev-tag-wrapper');
         // Enable the dev-brand
         this.DevBrand(this.yPos, this.dev_tag, this.screenOffset, this.winHeight);
         // Dev Brand Functionality

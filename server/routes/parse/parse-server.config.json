@@ -1,0 +1,12 @@
+{
+  "databaseURI": "mongodb://localhost:27017/wyf",
+  "cloud": "./server/cloud/cloud.js",
+  "appName": "WaleYaFoto",
+  "appId": "wyf-app",
+  "masterKey": "key",
+  "serverURL": "http://localhost:3000/parse",
+  "port": 1337,
+  "liveQuery": {
+    "classNames": ["_User", "Test"]
+  }
+}

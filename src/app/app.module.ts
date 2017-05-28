@@ -15,6 +15,13 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { DomInjectableService } from './dom-injectables.service';
 
+// Global Constants
+var Parse: any = require('parse');
+
+// Initialize Parse
+Parse.initialize('wyf-app', 'key');
+Parse.serverURL = 'http://localhost:3000/parse';
+
 @NgModule({
   declarations: [
     AppComponent,

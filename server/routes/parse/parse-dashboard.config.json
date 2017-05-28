@@ -1,0 +1,18 @@
+{
+    "allowInsecureHTTP": true,
+    "apps": [{
+        "appId": "wyf-app",
+        "appName": "Wale Ya Foto",
+        "masterKey": "key",
+        "serverURL": "http://localhost:3000/parse"
+    }],
+    "port": 4040,
+    "users": [{
+        "user": "ray",
+        "pass": "ray",
+        "apps": [{
+            "appId": "wyf-app"
+        }]
+    }],
+    "useEncryptedPasswords": false
+}
