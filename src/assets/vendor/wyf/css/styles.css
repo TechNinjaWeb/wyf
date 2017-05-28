@@ -221,6 +221,24 @@ nav.navbar {
 	text-align: center;
 }
 
+.navbar-default button.navbar-toggle.collapsed {
+    border-radius: 0;
+    border: 2px solid #ebab27;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    border-radius: 0;
+	background-color: #ebab27;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #e7a826;
+}
+
+.navbar-toggle .icon-bar:focus, .navbar-toggle .icon-bar:hover {
+    background-color: white;
+}
+
 .nav-link {
 	margin-right: 20px;
     letter-spacing: 2px;

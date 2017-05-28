@@ -15,23 +15,12 @@ router.StartLiveQuery = parse_routes.startLiveQuery;
 router.use('/parse', parse_routes.parse_server);
 router.get(['/admin', '/login', '/apps'], parse_routes.parse_dashboard);
 router.post('/login', parse_routes.parse_dashboard);
+
+/* MUST BE AUTHENTICATED IN THE FUTURE!!!!!!!!! */
 router.get('/parse-dashboard-config.json', (req, res, next)=> {
   // Send client config to fix admin backend errors
   res.status(200).json(parse_routes.config.dashboard);
   next();
-});
-
-// Get all posts
-router.get('/test', (req, res) => {
-  // Get posts from the mock api
-  // This should ideally be replaced with a service that connects to MongoDB
-  axios.get(`${API}/posts`)
-    .then(posts => {
-      res.status(200).json(posts.data);
-    })
-    .catch(error => {
-      res.status(500).send(error);
-    });
 });
 
 // Capture all other url patterns

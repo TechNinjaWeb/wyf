@@ -225,8 +225,8 @@ span.dt-secondary {
   margin-bottom: 120px;
 }
 
-.dev-content .contact-form textarea {
+.dev-content .contact-form textarea,  {
     border-radius: 4px;
-    color: #555555;
+    color: white;
     padding-left: 12px;
 }

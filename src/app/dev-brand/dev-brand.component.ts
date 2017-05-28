@@ -10,6 +10,8 @@ import { Component, OnInit, Inject, HostListener } from '@angular/core';
 import { DomInjectableService } from '../dom-injectables.service';
 import $ from 'jquery/dist/jquery';
 
+import { ParseApiService as Parse } from '../parse-api/parse-api.service';
+
 /**********************************************************************
  * Jquery Prototype: 
  * allows for chaining: $(selector).animateRotate()
@@ -53,7 +55,7 @@ export class DevBrandComponent implements OnInit {
     private dev_tag: any;
 
     // Constructor
-    constructor( private dom: DomInjectableService) {}
+    constructor( private dom: DomInjectableService, private parse: Parse) {}
 
     // Window Scroll Listener
     @HostListener("window:scroll", [])
@@ -66,6 +68,25 @@ export class DevBrandComponent implements OnInit {
 
         // Branding
         this.DevBrand(this.yPos, this.dev_tag, this.screenOffset, this.winHeight);
+    }
+
+    
+    submitForm(n: string, e: string, q: string): void
+    {
+        console.log("Submitting form", [arguments]);
+        let Table = this.parse.Api.Object.extend('TechNinja');
+        let table = new Table();
+    
+        let user = {
+            name: n,
+            email: e,
+            questions: q
+        };
+    
+        table.save(user, { 
+            success: function(res){ console.info(["Response", arguments]) },
+            error: function(err){ console.info(["Error", arguments]) }
+        });
     }
 
     // Executes when the controller is initialized

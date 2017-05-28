@@ -15,11 +15,13 @@
 		<div class="form-container col-sm-4 col-sm-offset-1">
 			<form action="" class="contact-form">
 				<div class="form-group">
-					<input type="text" class="form-control full-name" placeholder="Full Name">
-					<input type="email" class="form-control email" placeholder="Email">
-					<input type="text" class="form-control inquiry" placeholder="Inquiry">
-					<textarea name="" id="" cols="30" rows="10" class="form-control message" placeholder="Write Your Message!"></textarea>
-					<button class="wyf-button full-width">Send</button>
+					<input #name type="text" class="form-control full-name" placeholder="Full Name">
+					<input #email type="email" class="form-control email" placeholder="Email">
+					<input #inquiry type="text" class="form-control inquiry" placeholder="Inquiry">
+					<textarea #message name="" id="" cols="30" rows="10" class="form-control message" placeholder="Write Your Message!"></textarea>
+					<button class="wyf-button full-width" (click)="submitForm(
+						name.value, email.value, inquiry.value, message.value
+					)">Send</button>
 				</div>
 			</form>
 		</div>

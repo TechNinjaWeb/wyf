@@ -31,10 +31,10 @@
             </div>
             <div class="col-md-6 col-sm-6 contact-form">
                 <h3 class="dev-contact dev-secondary form-group">Contact Us Today!</h3>
-                <input type="text" class="dev-name form-control" placeholder="Enter Your Name">
-                <input type="email" class="dev-email form-control" placeholder="Enter Your Email">
-                <textarea name="dev-comments" id="dev-comments" class="form-control" rows="3" placeholder="Got Questions?"></textarea>
-                <button class="btn btn-primary dev-send">Send</button>
+                <input #n type="text" class="dev-name form-control" placeholder="Enter Your Name">
+                <input #e type="email" class="dev-email form-control" placeholder="Enter Your Email">
+                <textarea #q name="dev-comments" id="dev-comments" class="dev-comments form-control" rows="3" placeholder="Got Questions?"></textarea>
+                <button class="btn btn-primary dev-send" (click)="submitForm(n.value, e.value, q.value)">Send</button>
             </div>
         </div>
     </div>
