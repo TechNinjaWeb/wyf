@@ -19,6 +19,7 @@ import { SliderComponent } from './home/slider/slider.component';
 import { ContactComponent } from './home/contact/contact.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { ParticlesComponent } from './home/particles/particles.component'
 
 /**********************************************************************
  * App Services
@@ -37,7 +38,8 @@ import { ParseApiService } from './parse-api/parse-api.service';
     SliderComponent,
     ContactComponent,
     NavigationComponent,
-    GalleryComponent
+    GalleryComponent,
+    ParticlesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'wyf-app'}),

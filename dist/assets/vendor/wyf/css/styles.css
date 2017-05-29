@@ -278,6 +278,7 @@ section.about {
     min-width: 100vw;
     min-height: 60vh;
 	box-shadow: -1px -1px 4px rgba(0,0,0,0.5);
+	overflow: hidden;
 }
 
 .about-image {

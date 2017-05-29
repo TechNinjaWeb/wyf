@@ -86,7 +86,6 @@ span.dt-secondary {
 .dev-link-page-wrapper {
   display: block;
   width: 100%;
-  height: 20px;
   height: 100%;
   position: absolute;
   color: white;
@@ -102,7 +101,7 @@ span.dt-secondary {
     position: absolute;
     top: 0;
     left: 0;
-    width: 1000%;
+    width: 100%;
     opacity: 0.5;
 }
 
@@ -141,11 +140,12 @@ span.dt-secondary {
 
 .dev-content {
     position: relative;
+    font-family: 'Pt Sans';
     max-width: 960px;
     margin: 0 auto;
     margin-top: 40px;
+    padding-bottom: 50px;
     z-index: 1;
-    font-family: 'Pt Sans';
 }
 
 .dev-content .brand-logo {

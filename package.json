@@ -4,9 +4,10 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "prestart": "ng build --prod && ngc",
+    "prestart": "ng build --prod --aot",
     "start-mongo": "mongodb-runner start --bin ./server/dbl/",
-    "start": "npm run start-mongo && nodemon server/server.js",
+    "serve": "npm run start-mongo && nodemon server/server.js",
+    "start": "docker-compose build && docker-compose up",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

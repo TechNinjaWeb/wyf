@@ -8,11 +8,6 @@ import { ParseApiService as Parse } from '../../parse-api/parse-api.service';
 })
 export class ContactComponent implements OnInit 
 {
-  @Input()full_name: string;
-  email: string;
-  inquiry: string;
-  message: string;
-
   constructor(private parse: Parse) {}
   
   ngOnInit() {
@@ -31,18 +26,10 @@ export class ContactComponent implements OnInit
       message: m
     };
 
-    table.save(user, {
-    	success: function(res)
-    	{
-    		console.info(["Response", arguments])
-    	},
-    	error: function(err)
-    	{
-    		console.info(["Error", arguments])
-    	}
-    })
-
-    
+    table.save(user, { 
+      success: function(res){ console.info(["Response", arguments]) },
+    	error: function(err){ console.info(["Error", arguments]) }
+    });
   }
 
 }
