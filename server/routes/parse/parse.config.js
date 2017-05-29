@@ -2,7 +2,7 @@ let server = require('./parse-server.config.json');
 let dashboard = require('./parse-dashboard.config.json');
 
 let localhostURL = `http://localhost:${process.env.PORT}/parse`;
-let productionURL = process.env.HOST || "https://wyf-app.herokuapp.com";
+let productionURL = process.env.PRODUCTION_URL || "https://wyf-app.herokuapp.com";
 
 let serverURL = null;
 if (process.env.HOST !== 'localhost') serverURL = productionURL;
