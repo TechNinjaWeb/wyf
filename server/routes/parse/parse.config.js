@@ -1,12 +1,13 @@
 let server = require('./parse-server.config.json');
 let dashboard = require('./parse-dashboard.config.json');
 
-let localhostURL = `http://localhost:${process.env.PORT}/parse`;
+let localhostURL = `http://localhost:${process.env.PORT}`;
 let productionURL = process.env.PRODUCTION_URL || "https://wyf-app.herokuapp.com";
 
 let serverURL = null;
-if (process.env.HOST !== 'localhost') serverURL = productionURL;
-else serverURL = localhostURL;
+let endpoint = '/parse';
+if (process.env.HOST !== 'localhost') serverURL = productionURL + endpoint;
+else serverURL = localhostURL + endpoint;
 
 // Set server url to dynamic port
 server.serverURL = serverURL;
