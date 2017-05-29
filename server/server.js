@@ -1,3 +1,5 @@
+// Load the .env file into memory app-wide
+require('dotenv').config();
 // Get dependencies
 const express = require('express');
 const path = require('path');

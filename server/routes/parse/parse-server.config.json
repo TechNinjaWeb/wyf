@@ -1,10 +1,10 @@
 {
   "databaseURI": "mongodb://localhost:27017/wyf",
   "cloud": "./server/cloud/cloud.js",
-  "appName": "WaleYaFoto",
+  "appName": "WaleYaFoto Photography site",
   "appId": "wyf-app",
   "masterKey": "key",
-  "serverURL": "http://localhost:3000/parse",
+  "serverURL": "located in parse.config.js",
   "port": 1337,
   "liveQuery": {
     "classNames": ["_User", "Test"]

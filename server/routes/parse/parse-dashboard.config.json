@@ -2,9 +2,9 @@
     "allowInsecureHTTP": true,
     "apps": [{
         "appId": "wyf-app",
-        "appName": "Wale Ya Foto",
+        "appName": "WaleYaFoto Photography site",
         "masterKey": "key",
-        "serverURL": "http://localhost:3000/parse"
+        "serverURL": "located in parse.config.js"
     }],
     "port": 4040,
     "users": [{
