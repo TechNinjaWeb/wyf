@@ -87,7 +87,7 @@ gulp.task('test', function () {
   //   path: '/',
   //   contents: new Buffer(JSON.stringify(jObj))
   // });
-  let config = require('./server/routes/parse/parse.config.js')._parse_config_json;
+  let config = require('./server/routes/parse/parse.config.js');
   let server = config.server;
   let dashboard = config.dashboard;
 

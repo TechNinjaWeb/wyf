@@ -1,28 +1,43 @@
 # WaleYaFoto Photography Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+Modern photography through a suburban lens.
 
-## Development server
+## Instructions
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To start this app you must configure your environment variables in the `.env` file.
+Edit these lines to the appropriate values.
+```
+HOST=localhost
+PRODUCTION_URL=https://wyf-app.herokuapp.com
+```
+Spin up the application server by running `npm start`. 
+Should the `/dist` folder not exist, first run `npm build-prod`.
 
-## Code scaffolding
+## Development Deployment
+The respective server's Dockerfile is located in the `/.docker` directory.  Copy your chosen installation into the `Dockerfile` file found in the root directory.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+You must first build the docker container by running `docker build -t wyf-app .` from the base directory.
 
-## Build
+To deploy a standalone local container run `docker run -p [PORT]:[PORT] wyf-app` where PORT is the same as the one you'd like to use and your `.env` file's variable.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+### Example
+```
+docker run -p 8080:3000 wyf-app
+```
+where `.env PORT=3000` and the application url is `http://localhost:8080`.
 
-## Running unit tests
+## Production Deployment: 
+*Work In Progress*
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Docker supports multiple container image stacks that can be deployed to Heroku or AWS-like servers. At present, only a free heroku account could be obtained.
 
-## Running end-to-end tests
+### Configuring the Environment
+- Log into github: `git config --global user.name "Chosen User Name" user.email "my@github.email`
+- Then your heroku account: `heroku login`
+- Link heroku to github: `heroku git:remote -a wyf`
+- Save and deploy your source code: `npm run push-prod`
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+### Under Development
+Attempting to successfully run a docker container on heroku using `docker-compose`. 
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The `docker.development.yml` and `docker.production.yml` respectively have localhost running installations, but fails to successfully build upon deployment.

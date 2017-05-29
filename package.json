@@ -13,7 +13,8 @@
     "e2e": "ng e2e",
     "save": "git add . && git commit -m \"auto-saving\" && git push origin master",
     "save-heroku": "git push heroku master",
-    "push": "npm run build && npm run save && npm run save-heroku"
+    "push": "npm run build && npm run save && npm run save-heroku",
+    "push-prod": "npm run build-prod && npm run save && npm run save-heroku"
   },
   "private": true,
   "dependencies": {
