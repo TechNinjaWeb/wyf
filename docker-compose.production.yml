@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: ./.docker/wyf-app.production.dockerfile
-    command: npm run build.prod
+    command: npm run build-prod
     container_name: wyf-app-build-prod
     image: wyf-app
     networks:
