@@ -7,7 +7,7 @@ var Parse: any = require('parse');
 
 // Initialize Parse
 Parse.initialize('wyf-app', 'key');
-Parse.serverURL = ParseConfig.serverURL + '/parse';
+Parse.serverURL = ParseConfig.serverURL;
 
 
 @Injectable()

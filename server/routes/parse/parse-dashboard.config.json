@@ -4,7 +4,7 @@
         "appId": "wyf-app",
         "appName": "WaleYaFoto Photography site",
         "masterKey": "key",
-        "serverURL": "located in parse.config.js"
+        "serverURL": "http://localhost:8000/parse"
     }],
     "port": 4040,
     "users": [{
