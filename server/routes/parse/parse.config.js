@@ -19,7 +19,7 @@ else serverURL = localhostURL + endpoint;
 
 // Set server url to dynamic port
 server.serverURL = serverURL;
-for (var app in dashboard.apps) { app.serverURL = server.serverURL; }
+dashboard.apps.forEach(function(app){ app.serverURL = server.serverURL; });
 
 console.log(["server.serverURL", server.serverURL], ["dashboard.apps[0].serverURL", dashboard.apps[0].serverURL]);
 
