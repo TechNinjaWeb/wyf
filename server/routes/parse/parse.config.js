@@ -21,6 +21,8 @@ else serverURL = localhostURL + endpoint;
 server.serverURL = serverURL;
 for (var app in dashboard.apps) { app.serverURL = serverURL; }
 
+console.log(["server.serverURL", server.serverURL], ["dashboard.apps[0].serverURL", dashboard.apps[0].serverURL]);
+
 // Export the server and dashboard applications
 exports.server = server;
 exports.dashboard = dashboard;
