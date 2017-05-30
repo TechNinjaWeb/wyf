@@ -1,6 +1,6 @@
 // Declare globals
 const parse_config = require('./parse.config.js');
-exports.config = parse_config;
+
 const ParseServer = require('parse-server').ParseServer;
 const ParseDashboard = require('parse-dashboard');
 // const LiveQuery = require('./parse-live-query.js')
@@ -10,6 +10,7 @@ const api = new ParseServer(parse_config.server);
 const dashboard = new ParseDashboard(parse_config.dashboard);
 
 // Export Functions
+exports.config = parse_config;
 exports.dashboard = dashboard;
 exports.api = api;
 

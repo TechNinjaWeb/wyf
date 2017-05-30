@@ -4,6 +4,12 @@ declare var require: NodeRequire;
 /* SystemJS module definition */
 declare var module: NodeModule;
 
+/* Declare a module for importing json documents with import keyword */
+declare module "*.json" {
+    const value: any;
+    export default value;
+}
+
 declare var jquery: any;
 declare var $: JQueryStatic;
 

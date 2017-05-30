@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { DomInjectableService } from '../dom-injectables.service';
-import * as ParseConfig from '../../server/routes/parse/parse.config.js';
+import * as ParseConfig from '../../../server/routes/parse/parse.config.js';
 
 // Global Constants
 var Parse: any = require('parse');
 
 // Initialize Parse
 Parse.initialize('wyf-app', 'key');
-Parse.serverURL = ParseConfig.server.serverURL + '/parse';
+Parse.serverURL = ParseConfig.serverURL + '/parse';
 
 
 @Injectable()
